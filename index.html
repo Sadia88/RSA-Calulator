@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSA Calculator</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    
+    <header>
+      <h1 class="intro"><span class="id"> ID:-</span>17701088 <span class="id"> Name:-</span>Sadia Sharmin </h1>
+       <div id="Headline">
+        <h1>RSA<span class="hightlight"> Calulator</span></h1>
+        
+      </div>
+
+    </header>
+    <div class="container">
+      <p class="up-side">
+          A web based program for calculating public and private keys and
+          encrypting and decrypting texts using these keys.
+        </p>
+      <main>
+        <div>
+          
+            <div class="box">
+              <fieldset>
+                <h3>Enter two prime numbers- <span class="hightlight"> P and  Q</span></h3>
+                <h3>Prime in between 17 and 100: (As we will cover ascii characters only)</h3>
+                </br>
+                <h3>17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97</h3>
+                </br>
+                
+                <input type="number" id="p" name="p" placeholder="Enter the value of P" />
+                
+                
+                <input type="number" id="q" name="q"  placeholder="Enter the value of Q"/>
+                
+                <br /><br />
+                <button class="btn-btn-primary" onclick="generate()">Submit</button>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+        <div class="para">
+          <p>
+            <h4> Value of <em>(P*Q) n</em>: <br> <input type="number" id="n" name="n" readonly="true"></h4>
+           
+          </p>
+          <p>
+            <h4> value of <em>{(P-1) * (Q-1)} &phi;(n)</em>: <br> <input type="number" id="phi" name="phi" readonly="true">
+            </h4>
+          </p>
+          <p>
+            <h3>  Calculated value of <em>e</em> <br>
+            <input type="number" id="e" name="e" readonly="true">
+            </h3>
+          </p>
+        </div>
+        
+        <div class="para">
+          <p>
+           <h4> Calculated  value of <em>d</em>:<br><input type="number" id="d" name="d" readonly="true"> </h4>
+          </p>
+          <p><h4>So the public key is: <br><input id="pub" name="pub" readonly="true"></h4></p>
+          <p><h4>And the private key is: <br><input id="pri" name="pri" readonly="true"></h4></p>
+        </div>
+        <div>
+             <div class="box">
+                <fieldset>
+                  <p><h3> Encryption </h3> </p>
+                  <div>
+                    <label for="ins">Input(ASCII lowercase character only):</label><br>
+                    <input id="ins" name="ins">
+                  </div>
+                  
+                  <button class="btn-btn-primary" onclick="enc()">Encrypt</button>
+                  
+
+                  <div>
+                  <label for="en">Encrypted Text:</label><br>
+                  <input id="en" name="en" readonly="true">
+                  </div>
+
+                  <hr>
+                  
+                  <br /><br />
+                </fieldset>
+            </div>
+          
+        </div>
+        <div>
+          
+            <div class="box">
+                <fieldset>
+                  <p><h3> Decryption</h3> </p>
+                  <div>
+                    <label for="ind">Input(To Decrypt):</label><br>
+                    <input id="ind" name="ind">
+                    </div>
+                     
+                    <button class="btn-btn-primary" onclick="dec()">Decrypt</button>
+                    
+                    <div>
+                    <label for="de">Decrypted Text:</label><br>
+                    <input id="de" name="de" readonly="true">
+                  </div>
+                  
+                 
+                </fieldset>
+             </div>
+          </form>
+        </div>
+        <hr>
+
+
+
+      </main>
+    </div>
+    
+    <script src="index.js"></script>
+  </body>
+</html>
